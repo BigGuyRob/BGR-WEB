@@ -1,0 +1,26 @@
+{
+    "name": "BGR_PC_WEB",
+    "version": "1.0.0",
+    "scripts": {
+        "client": "cd client && npm start",
+        "server": "nodemon Server.js",
+        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+        "start": "node Server.js",
+        "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "http-errors": "^2.0.0",
+        "morgan": "^1.10.0",
+        "mysql": "^2.18.1",
+        "path": "^0.12.7",
+        "sib-api-v3-sdk": "^8.4.2",
+        "superagent": "^8.0.0"
+    },
+    "devDependencies": {
+        "concurrently": "^4.0.1"
+    }
+}
